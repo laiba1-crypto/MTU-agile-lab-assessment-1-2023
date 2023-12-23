@@ -1,0 +1,417 @@
+
+asifl@DESKTOP-FBNJN0G MINGW64 /
+$ cd
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~
+$ mkdir SD3_A_GitAsses_23
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~
+$ cd SD3_A_GitAsses_23
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23
+$ git init
+Initialized empty Git repository in C:/Users/asifl/SD3_A_GitAsses_23/.git/
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git config --global user.name "Laiba Asif R00201303"
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git config --global user.email "laiba.asif@mycit.ie"
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git config  user.name
+Laiba Asif R00201303
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git config  user.email
+laiba.asif@mycit.ie
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ touch lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ head -n 2 SD3_A_SongData.txt > lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+       	new file:   lyrics.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+       	SD3_A_SongData.txt
+
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "first message"
+[master (root-commit) f582869] first message
+ 1 file changed, 2 insertions(+)
+ create mode 100644 lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log --oneline
+f582869 (HEAD -> master) first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "2 more lines added to lyrics file"
+[master 631ecd0] 2 more lines added to lyrics file
+ 1 file changed, 2 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "extra 2 lines added to lyrics file"
+[master 89c2021] extra 2 lines added to lyrics file
+ 1 file changed, 2 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "again doing the same thing 2 more lines added to lyrics file"
+[master 2744ce6] again doing the same thing 2 more lines added to lyrics file
+ 1 file changed, 2 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log --oneline
+2744ce6 (HEAD -> master) again doing the same thing 2 more lines added to lyrics file
+89c2021 extra 2 lines added to lyrics file
+631ecd0 2 more lines added to lyrics file
+f582869 first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log
+commit 2744ce6c3ad5f0d109d10e45badeb238f04f5478 (HEAD -> master)
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:26:53 2023 +0100
+
+    again doing the same thing 2 more lines added to lyrics file
+
+commit 89c20211dc7a56222103a14c8e012e456c9488c8
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:25:43 2023 +0100
+
+    extra 2 lines added to lyrics file
+
+commit 631ecd070b4076794985638d5a8d4b46b797ada1
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:22:57 2023 +0100
+
+    2 more lines added to lyrics file
+
+commit f58286995aac012829b6306863d8707e064c0f28
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:18:46 2023 +0100
+
+    first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git branch extra_lines
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git checkout extra_lines
+Switched to branch 'extra_lines'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git commit -m "4 more lines added to lyrics file"
+[extra_lines 8744afa] 4 more lines added to lyrics file
+ 1 file changed, 6 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git checkout master
+Switched to branch 'master'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git merge extra_lines
+Updating 2744ce6..8744afa
+Fast-forward
+ lyrics.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+       	SD3_A_SongData.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add .
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "merged changes from 'extra_lines' branch"
+[master 16a68c0] merged changes from 'extra_lines' branch
+ 1 file changed, 30 insertions(+)
+ create mode 100644 SD3_A_SongData.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "2 more lines added to lyrics file task 13"
+[master 6138e65] 2 more lines added to lyrics file task 13
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log
+commit 6138e655b60a821320e80c3b0185a76082762608 (HEAD -> master)
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:40:44 2023 +0100
+
+    2 more lines added to lyrics file task 13
+
+commit 16a68c06a8956257091129151b1bb2850721b235
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:38:25 2023 +0100
+
+    merged changes from 'extra_lines' branch
+
+commit 8744afab7e32abce95ca965121092cf3593760aa (extra_lines)
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:34:32 2023 +0100
+
+    4 more lines added to lyrics file
+
+commit 2744ce6c3ad5f0d109d10e45badeb238f04f5478
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:26:53 2023 +0100
+
+    again doing the same thing 2 more lines added to lyrics file
+
+commit 89c20211dc7a56222103a14c8e012e456c9488c8
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:25:43 2023 +0100
+
+    extra 2 lines added to lyrics file
+
+commit 631ecd070b4076794985638d5a8d4b46b797ada1
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:22:57 2023 +0100
+
+    2 more lines added to lyrics file
+
+commit f58286995aac012829b6306863d8707e064c0f28
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:18:46 2023 +0100
+
+    first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ ^C
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git diff f58286995aac012829b6306863d8707e064c0f28..631ecd
+diff --git a/lyrics.txt b/lyrics.txt
+index 45772d2..5abc1a8 100644
+--- a/lyrics.txt
++++ b/lyrics.txt
+@@ -1,2 +1,4 @@
+ … And now the end is here
+ And so I face that final curtain
++My friend I'll make it clear
++I'll state my case, of which I'm certain
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git checkout master
+Already on 'master'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "2 more lines added to lyrics file task 15"
+[master ccc79f4] 2 more lines added to lyrics file task 15
+ 1 file changed, 2 insertions(+)
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git stash save
+No local changes to save
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git checkout ectra_lines
+error: pathspec 'ectra_lines' did not match any file(s) known to git
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git checkout extra_lines
+Switched to branch 'extra_lines'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git stash apply
+No stash entries found.
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git checkout master
+Switched to branch 'master'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git stash apply
+No stash entries found.
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ nano lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git add lyrics.txt
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git commit -m "nothing got change because no stash entries found"
+On branch master
+nothing to commit, working tree clean
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log --oneline
+ccc79f4 (HEAD -> master) 2 more lines added to lyrics file task 15
+6138e65 2 more lines added to lyrics file task 13
+16a68c0 merged changes from 'extra_lines' branch
+8744afa (extra_lines) 4 more lines added to lyrics file
+2744ce6 again doing the same thing 2 more lines added to lyrics file
+89c2021 extra 2 lines added to lyrics file
+631ecd0 2 more lines added to lyrics file
+f582869 first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ cat lyrics.txt
+… And now the end is here
+And so I face that final curtain
+My friend I'll make it clear
+I'll state my case, of which I'm certain
+I've lived a life that's full
+I travelled each and every highway
+And more, much more
+
+I did it, I did it my way
+… Regrets, I've had a few
+But then again too few to mention
+I did what I had to do
+I saw it through without exemption
+I planned each charted course
+Each careful step along the byway
+And more, much, much more
+I did it, I did it my way
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git log
+commit ccc79f4010678df17f8a4ed8bafc737228563069 (HEAD -> master)
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:46:35 2023 +0100
+
+    2 more lines added to lyrics file task 15
+
+commit 6138e655b60a821320e80c3b0185a76082762608
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:40:44 2023 +0100
+
+    2 more lines added to lyrics file task 13
+
+commit 16a68c06a8956257091129151b1bb2850721b235
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:38:25 2023 +0100
+
+    merged changes from 'extra_lines' branch
+
+commit 8744afab7e32abce95ca965121092cf3593760aa (extra_lines)
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:34:32 2023 +0100
+
+    4 more lines added to lyrics file
+
+commit 2744ce6c3ad5f0d109d10e45badeb238f04f5478
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:26:53 2023 +0100
+
+    again doing the same thing 2 more lines added to lyrics file
+
+commit 89c20211dc7a56222103a14c8e012e456c9488c8
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:25:43 2023 +0100
+
+    extra 2 lines added to lyrics file
+
+commit 631ecd070b4076794985638d5a8d4b46b797ada1
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:22:57 2023 +0100
+
+    2 more lines added to lyrics file
+
+commit f58286995aac012829b6306863d8707e064c0f28
+Author: Laiba Asif R00201303 <laiba.asif@mycit.ie>
+Date:   Wed Oct 18 14:18:46 2023 +0100
+
+    first message
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ cat lyrics.txt
+… And now the end is here
+And so I face that final curtain
+My friend I'll make it clear
+I'll state my case, of which I'm certain
+I've lived a life that's full
+I travelled each and every highway
+And more, much more
+
+I did it, I did it my way
+… Regrets, I've had a few
+But then again too few to mention
+I did what I had to do
+I saw it through without exemption
+I planned each charted course
+Each careful step along the byway
+And more, much, much more
+I did it, I did it my way
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git tag -a v2.0 -m "Extended version"
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (master)
+$ git checkout extra_lines
+Switched to branch 'extra_lines'
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git tag -a v1.0 -m "Radio version"
+
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ git tag
+v1.0
+v2.0
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$ ^C
+
+asifl@DESKTOP-FBNJN0G MINGW64 ~/SD3_A_GitAsses_23 (extra_lines)
+$
